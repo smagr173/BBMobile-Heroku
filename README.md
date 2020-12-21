@@ -1,1 +1,1 @@
-This is the repo for the Hobbie PHP backend
+This is the repo for the BBMobile PHP backend
