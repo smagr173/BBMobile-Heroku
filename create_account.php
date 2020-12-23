@@ -65,5 +65,5 @@ include "functions.php";
 			$msgs['fail'] = "Register failed: Check connection";
 		}
 	}
-	echo json_encode($msgs);  // Display messages in JSON format
+	echo json_encode($msgs);  // Output messages in JSON format
 ?>
