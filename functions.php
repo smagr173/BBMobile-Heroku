@@ -312,7 +312,7 @@ function doesEmailExist($email) {
         }
     }
     return $result;
-    }
+  }
     catch (Exception $e) {
 	return false;
     }
@@ -326,6 +326,7 @@ function doesEmailExist($email) {
  * false.
  */
 function updateEmailExist($email,$hashed) {
+   try {
     $result = false;
     $db = new PDO("sqlite:content.db");
     $sql = "SELECT email,password FROM users";
@@ -339,8 +340,11 @@ function updateEmailExist($email,$hashed) {
         }
     }
     return $result;
+   }
+    catch (Exception $e) {
+      return false;
+    }
     $db = NULL;
 }
-
 
 ?>
