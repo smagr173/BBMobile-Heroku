@@ -298,6 +298,7 @@ function updateEmail($value, $pass) {
  * false.
  */
 function doesEmailExist($email) {
+  try {
     $result = false;
     $db = new PDO("sqlite:content.db");
     $sql = "SELECT email FROM users";
@@ -311,6 +312,10 @@ function doesEmailExist($email) {
         }
     }
     return $result;
+    }
+    catch (Exception $e) {
+	return false;
+    }
     $db = NULL;
 }
 
